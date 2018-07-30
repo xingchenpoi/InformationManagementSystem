@@ -28,7 +28,7 @@ namespace 干部信息管理系统
             string fPath            //ini文件的完整路径和名称
             );
 
-        public static string ReadString(string key)
+        public string ReadString(string key)
         {
             string fPath = Application.StartupPath + "\\config.ini";
             StringBuilder temp = new StringBuilder(1024);
@@ -37,7 +37,7 @@ namespace 干部信息管理系统
         }
 
 
-        public static void WriteString(string key, string val)
+        public void WriteString(string key, string val)
         {
             string fPath = Application.StartupPath + "\\config.ini";
             WritePrivateProfileString("hbs",key,val,fPath);
